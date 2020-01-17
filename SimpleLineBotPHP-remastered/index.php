@@ -40,8 +40,8 @@ $app->post('/', function ($request, $response)
 	}
 
 	// init bot
-	$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($_ENV['3qe8pKHLLuqvAQGjMHLI7jYKCe5ZCslOicK/U4mGgNMyfn08QcdDKljb0tjGOYiwap8LQWA73PkqhtgyIoyKVVM3PJvMGlImnEaOrKaAz+aA7sGmAv87L8Q/DoN3wynkMp9J8Oi8H8cSHDNq6Le1FwdB04t89/1O/w1cDnyilFU=']);
-	$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $_ENV['ca149de526714fdbc805eb73a15d49a6']]);
+	$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($_ENV['CHANNEL_ACCESS_TOKEN']);
+	$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $_ENV['CHANNEL_SECRET']]);
 	$data = json_decode($body, true);
 	foreach ($data['events'] as $event)
 	{
