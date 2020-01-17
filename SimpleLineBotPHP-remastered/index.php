@@ -20,7 +20,7 @@ $app->get('/', function ($request, $response) {
 	return "Lanjutkan!";
 });
 
-$app->post('/', function ($request, $response)
+$app->post('/callback', function ($request, $response)
 {
 	// get request body and line signature header
 	$body 	   = file_get_contents('php://input');
